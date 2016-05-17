@@ -1,0 +1,10 @@
+function NotesApplication(author, note_content) {
+	this.author = author;
+	this.notes = [];
+	this.create() = function(note_content) {
+		this.notes.push(note_content);
+	}
+	this.listNotes() = function(note_id, ) {
+		// body...
+	}
+}
