@@ -11,6 +11,26 @@ function NotesApplication(author, note_content) {
 	}
 
 	this.get() = function(note_id) {
-		return 
+		this.note_id = this.notes[n];
+		return n;
 	}
+
+	this.search() = function(search_text) {
+		if (this.notes.includes(search_text) === true) {
+			console.log("Showing results for search '[<search_text>]'"\n\n"Note ID: "[note_id]\note_content\n\n\n"By Author "author);
+		}
+		else {
+			console.log("No match found");
+		}
+	}
+
+	this.delete() = function(note_id) {
+
+	}
+
+	this.edit() = function(note_id, new_content) {
+		
+	}
+
+
 }
