@@ -6,23 +6,23 @@ function NotesApplication(author, note_content) {
 	this.note_id = this.note_id = this.notes.indexOf(note_content); //initialize note_id for future methods
 
 	//we need a method that allows us to add new notes to the list
-	this.create() = function(note_content) {
+	function create(note_content) {
 		this.notes.push(note_content); //add the given note_content to the list
 		return this.notes; //return the updated list
 	}
 
 	//we need a method that shows all the saved notes in a pretty format
-	this.listNotes() = function(note_id, note_content) {
+	function listNotes(note_id, note_content) {
 		console.log("Note ID: "this.note_id\nnote_content\n\n\n"By Author "this.author);
 	}
 
 	//we need a method that lets us find notes by id
-	this.get() = function(note_id) {
+	function get(note_id) {
 			return this.notes[note_id].toString();
 	}
 
 	//we need a method that lets us search for notes by content
-	this.search() = function(search_text) {
+	function search(search_text) {
 		if (this.notes.includes(search_text) === true) {
 			console.log("Showing results for search "search_text\n\n"Note ID: "note_id\nnote_content\n\n\n"By Author "author);
 		}
@@ -32,12 +32,12 @@ function NotesApplication(author, note_content) {
 	}
 
 	//we need a method that allows us to delete notes
-	this.delete() = function(note_id) {
+	function del(note_id) {
 		return this.notes -= this.notes[note_id];
 	}
 
 	//we need a method that lets us edit notes
-	this.edit() = function(note_id, new_content) {
+	function edit(note_id, new_content) {
 		this.notes[note_id] = new_content;
 		return this.notes[note_id];
 	}
