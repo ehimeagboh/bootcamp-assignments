@@ -1,10 +1,16 @@
 function NotesApplication(author, note_content) {
 	this.author = author;
-	this.notes = [];
+	this.notes = []; //should i initialize note_content?
 	this.create() = function(note_content) {
 		this.notes.push(note_content);
 	}
-	this.listNotes() = function(note_id, ) {
-		// body...
+
+	this.listNotes() = function(note_id, note_content) {
+		this.note_id = this.notes[n]; //do i need a loop?
+		console.log("Note ID: "this.note_id\note_content\n\n\n"By Author"this.author);
+	}
+
+	this.get() = function(note_id) {
+		return 
 	}
 }
