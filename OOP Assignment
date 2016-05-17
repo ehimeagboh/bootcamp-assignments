@@ -31,12 +31,15 @@ function NotesApplication(author, note_content) {
 		}
 	}
 
+	//we need a method that allows us to delete notes
 	this.delete() = function(note_id) {
-
+		return this.notes -= this.notes[note_id];
 	}
 
+	//we need a method that lets us edit notes
 	this.edit() = function(note_id, new_content) {
-
+		this.notes[note_id] = new_content;
+		return this.notes[note_id];
 	}
 
 
