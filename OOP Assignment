@@ -1,7 +1,9 @@
+//Construct an object that functions as a note-taking application 
 function NotesApplication(author, note_content) {
 	this.author = author; //initialize the author parameter for the object
 	this.note_content = note_content; //initialize note_content parameter for the object
 	this.notes = []; //create an empty list to hold future notes
+	this.note_id = this.note_id = this.notes.indexOf(note_content); //initialize note_id for future methods
 
 	//we need a method that allows us to add new notes to the list
 	this.create() = function(note_content) {
@@ -11,15 +13,15 @@ function NotesApplication(author, note_content) {
 
 	//we need a method that shows all the saved notes in a pretty format
 	this.listNotes() = function(note_id, note_content) {
-		this.note_id = this.notes.indexOf(note_content); //do i need a loop?
-		console.log("Note ID: "this.note_id\note_content\n\n\n"By Author"this.author);
+		console.log("Note ID: "this.note_id\nnote_content\n\n\n"By Author "this.author);
 	}
 
+	//we need a method that lets us find notes by id
 	this.get() = function(note_id) {
-		this.note_id = this.notes[n];
-		return n;
+			return this.notes[note_id].toString();
 	}
 
+	//we need a method that lets us search for notes by content
 	this.search() = function(search_text) {
 		if (this.notes.includes(search_text) === true) {
 			console.log("Showing results for search "search_text\n\n"Note ID: "note_id\nnote_content\n\n\n"By Author "author);
