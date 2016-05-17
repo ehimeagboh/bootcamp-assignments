@@ -1,12 +1,17 @@
 function NotesApplication(author, note_content) {
-	this.author = author;
-	this.notes = []; //should i initialize note_content?
+	this.author = author; //initialize the author parameter for the object
+	this.note_content = note_content; //initialize note_content parameter for the object
+	this.notes = []; //create an empty list to hold future notes
+
+	//we need a method that allows us to add new notes to the list
 	this.create() = function(note_content) {
-		this.notes.push(note_content);
+		this.notes.push(note_content); //add the given note_content to the list
+		return this.notes; //return the updated list
 	}
 
+	//we need a method that shows all the saved notes in a pretty format
 	this.listNotes() = function(note_id, note_content) {
-		this.note_id = this.notes[n]; //do i need a loop?
+		this.note_id = this.notes.indexOf(note_content); //do i need a loop?
 		console.log("Note ID: "this.note_id\note_content\n\n\n"By Author"this.author);
 	}
 
@@ -17,7 +22,7 @@ function NotesApplication(author, note_content) {
 
 	this.search() = function(search_text) {
 		if (this.notes.includes(search_text) === true) {
-			console.log("Showing results for search '[<search_text>]'"\n\n"Note ID: "[note_id]\note_content\n\n\n"By Author "author);
+			console.log("Showing results for search "search_text\n\n"Note ID: "note_id\nnote_content\n\n\n"By Author "author);
 		}
 		else {
 			console.log("No match found");
@@ -29,7 +34,7 @@ function NotesApplication(author, note_content) {
 	}
 
 	this.edit() = function(note_id, new_content) {
-		
+
 	}
 
 
