@@ -13,7 +13,8 @@ function NotesApplication(author, note_content) {
 
 	//we need a method that shows all the saved notes in a pretty format
 	function listNotes(note_id, note_content) {
-		console.log("Note ID: " + note_id + "\n" + note_content + "\n" + "\n" + "\n" + "By Author " + author);
+		console.log('Note ID: ' + note_id + '\n' + note_content + '\n' + '\n' + '\n' + 'By Author\
+		 ' + author);
 	}	//print out the notes in the format specified
 
 	//we need a method that lets us find notes by id
@@ -25,10 +26,11 @@ function NotesApplication(author, note_content) {
 	//we need a method that lets us search for notes by content
 	function search(search_text) {
 		if (this.notes.includes(search_text) === true) {
-			console.log("Showing results for search " + search_text + "\n" + "\n" + "Note ID: " + note_id + "\n" + note_content + "\n" + "\n" + "\n" + "By Author " + author);
+			console.log('Showing results for search ' + search_text + '\n' + '\n' + 'Note ID:\
+			 ' + note_id + '\n' + note_content + '\n' + '\n' + '\n' + 'By Author ' + author);
 		}//if the search terms match text in any note, print the results in the above format
 		else {
-			console.log("No match found");
+			console.log('No match found');
 		}//otherwise, print the above message
 	}
 
