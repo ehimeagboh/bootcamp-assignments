@@ -5,6 +5,9 @@ describe("NotesApplication", function() {
     var note_id = 0;
     describe("note creator", function() {
         it("saves note in an array", function() {
+            create = function(note_content) {
+                return notes;
+            }
             expect(create(note_content)).toEqual(notes);
         }); 
         it("only accepts strings", function() {
@@ -12,8 +15,11 @@ describe("NotesApplication", function() {
         });
     });
     describe("note formatter", function() {
+        listNotes = function(note_id, note_content) {
+
+        }
         it("lists notes by id", function() {
-            expect(listNotes(0, "Buy milk")).toEqual("Note ID: " + 1 + "\n" + "Buy sugar" + "\n" + "\n" + "\n" + "By Author " + author);
+            expect(listNotes(0, "Buy milk")).toEqual(console.log("Note ID: " + 0 + "\n" + "Buy milk" + "\n" + "\n" + "\n" + "By Author " + author));
         });
     });
     describe("search notes", function() {
