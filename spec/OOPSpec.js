@@ -1,6 +1,3 @@
-//attempt 1 to create test cases
-describe("NotesApplication", function() {
-//attempt 2 to create test cases
 describe("NotesApplication", function() {
     var author = "Ehime";
     var note_content = "Buy milk";
@@ -20,7 +17,7 @@ describe("NotesApplication", function() {
         });
     });
     describe("search notes", function() {
-        it()
+        it("")
     });
     describe("delete notes", function() {
 
