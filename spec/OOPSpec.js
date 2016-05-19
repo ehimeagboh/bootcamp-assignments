@@ -13,6 +13,11 @@ describe("NotesApplication", function() {
 		myNote.create(note_content);
 		expect(typeof myNote.create).toEqual("array");
 	});
+
+  it("should allow the user to find the note id", function() {
+    expect(typeof myNote.get(note_id)).toEqual("string");
+    
+  })
 })
 describe("NotesApplication", function() {
   var myNote;
