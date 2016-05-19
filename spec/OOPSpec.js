@@ -53,6 +53,9 @@ describe("NotesApplication", function() {
         it("can remove saved notes", function() {
             expect(notes).toEqual([]);
         });
+        it("only accepts numbers as arguments", function) {
+            expect(typeof note_id).toEqual("number");
+        }
     });
     describe("edit notes", function() {
         edit = function(note_id, new_content) {
