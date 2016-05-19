@@ -1,79 +1,32 @@
-
-"use strict"
-
-//test cases for NotesApplication
+//attempt 1 to create test cases
 describe("NotesApplication", function() {
-	var myNote;
+//attempt 2 to create test cases
+describe("NotesApplication", function() {
+    var author = "Ehime";
+    var note_content = "Buy milk";
+    var notes = ["Buy milk"];
+    var note_id = 0;
+    describe("note creator", function() {
+        it("saves note in an array", function() {
+            expect(create(note_content)).toEqual(notes);
+        }); 
+        it("only accepts strings", function() {
+            expect(typeof(note_content)).toEqual("string");
+        });
+    });
+    describe("note formatter", function() {
+        it("lists notes by id", function() {
+            expect(listNotes(0, "Buy milk")).toEqual("Note ID: " + 1 + "\n" + "Buy sugar" + "\n" + "\n" + "\n" + "By Author " + author);
+        });
+    });
+    describe("search notes", function() {
+        it()
+    });
+    describe("delete notes", function() {
 
-	beforeEach(function() {
-		myNote = new NotesApplication;
-	});
+    });
+    describe("edit notes", function() {
 
-	it("should store a new note in an array", function() {
-		myNote.create(note_content);
-		expect(typeof myNote.create).toEqual("array");
-	});
-
-  it("should allow the user to find the note id", function() {
-    expect(typeof myNote.get(note_id)).toEqual("string");
-    
-  })
+    });
 })
-describe("NotesApplication", function() {
-  var myNote;
-  var song;
 
-  beforeEach(function() {
-    myNote = new NotesApplication();
-    song = new Song();
-  });
-
-  it("should store a new note in an array", function() {
-    myNote.create(note_content);
-    expect(typeof myNote.create).toEqual("array");
-
-    //demonstrates use of custom matcher
-    expect(player).toBePlaying(song);
-  });
-
-  describe("when song has been paused", function() {
-    beforeEach(function() {
-      player.play(song);
-      player.pause();
-    });
-
-    it("should indicate that the song is currently paused", function() {
-      expect(player.isPlaying).toBeFalsy();
-
-      // demonstrates use of 'not' with a custom matcher
-      expect(player).not.toBePlaying(song);
-    });
-
-    it("should be possible to resume", function() {
-      player.resume();
-      expect(player.isPlaying).toBeTruthy();
-      expect(player.currentlyPlayingSong).toEqual(song);
-    });
-  });
-
-  // demonstrates use of spies to intercept and test method calls
-  it("tells the current song if the user has made it a favorite", function() {
-    spyOn(song, 'persistFavoriteStatus');
-
-    player.play(song);
-    player.makeFavorite();
-
-    expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);
-  });
-
-  //demonstrates use of expected exceptions
-  describe("#resume", function() {
-    it("should throw an exception if song is already playing", function() {
-      player.play(song);
-
-      expect(function() {
-        player.resume();
-      }).toThrowError("song is already playing");
-    });
-  });
-});
